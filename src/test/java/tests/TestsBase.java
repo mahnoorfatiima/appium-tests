@@ -28,7 +28,7 @@ public class TestsBase extends AbstractTestNGCucumberTests {
         caps.setCapability("deviceName","Android Emulator");
         caps.setCapability("app",System.getProperty("user.dir")+"/apps/app-debug.apk");
         //set this capability to simulate Slow Internet Connection
-        //caps.setCapability("networkSpeed", "lte");
+        caps.setCapability("networkSpeed", "lte");
         return driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"),caps);
     }
     public void waitForVisibility(WebElement element) {
